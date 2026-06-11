@@ -50,7 +50,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function ArticlePage() {
-  const { article } = Route.useLoaderData();
+  const { article } = Route.useLoaderData() as { article: NonNullable<ReturnType<typeof import("@/data/articles").articleBySlug>> };
   const { t, lang } = useI18n();
   const cat = categoryById(article.category);
 

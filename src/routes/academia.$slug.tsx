@@ -38,7 +38,7 @@ export const Route = createFileRoute("/academia/$slug")({
 });
 
 function CoursePage() {
-  const { course } = Route.useLoaderData();
+  const { course } = Route.useLoaderData() as { course: NonNullable<ReturnType<typeof import("@/data/courses").courseBySlug>> };
   const { t, lang } = useI18n();
   const cat = categoryById(course.category);
   const Icon = cat.icon;
@@ -79,7 +79,7 @@ function CoursePage() {
             <span className="flex items-center gap-2 text-muted-foreground">
               <BookOpen className="h-4 w-4 text-primary" /> {course.lessons} {t("academy.lessons")}
             </span>
-            <span className="text-primary">{t(`common.${course.level}`)}</span>
+            <span className="text-primary">{t(`common.${course.level}` as const)}</span>
           </div>
 
           <button
