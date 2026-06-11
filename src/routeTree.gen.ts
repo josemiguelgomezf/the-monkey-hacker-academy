@@ -9,38 +9,174 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as RecursosRouteImport } from './routes/recursos'
+import { Route as MongomailRouteImport } from './routes/mongomail'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as AcademiaIndexRouteImport } from './routes/academia.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as AcademiaSlugRouteImport } from './routes/academia.$slug'
 
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosRoute = RecursosRouteImport.update({
+  id: '/recursos',
+  path: '/recursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MongomailRoute = MongomailRouteImport.update({
+  id: '/mongomail',
+  path: '/mongomail',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademiaIndexRoute = AcademiaIndexRouteImport.update({
+  id: '/academia/',
+  path: '/academia/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademiaSlugRoute = AcademiaSlugRouteImport.update({
+  id: '/academia/$slug',
+  path: '/academia/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/mongomail': typeof MongomailRoute
+  '/recursos': typeof RecursosRoute
+  '/sobre': typeof SobreRoute
+  '/academia/$slug': typeof AcademiaSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/academia/': typeof AcademiaIndexRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/mongomail': typeof MongomailRoute
+  '/recursos': typeof RecursosRoute
+  '/sobre': typeof SobreRoute
+  '/academia/$slug': typeof AcademiaSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/academia': typeof AcademiaIndexRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
+  '/mongomail': typeof MongomailRoute
+  '/recursos': typeof RecursosRoute
+  '/sobre': typeof SobreRoute
+  '/academia/$slug': typeof AcademiaSlugRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/academia/': typeof AcademiaIndexRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/comunidad'
+    | '/mongomail'
+    | '/recursos'
+    | '/sobre'
+    | '/academia/$slug'
+    | '/blog/$slug'
+    | '/academia/'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/comunidad'
+    | '/mongomail'
+    | '/recursos'
+    | '/sobre'
+    | '/academia/$slug'
+    | '/blog/$slug'
+    | '/academia'
+    | '/blog'
+  id:
+    | '__root__'
+    | '/'
+    | '/comunidad'
+    | '/mongomail'
+    | '/recursos'
+    | '/sobre'
+    | '/academia/$slug'
+    | '/blog/$slug'
+    | '/academia/'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ComunidadRoute: typeof ComunidadRoute
+  MongomailRoute: typeof MongomailRoute
+  RecursosRoute: typeof RecursosRoute
+  SobreRoute: typeof SobreRoute
+  AcademiaSlugRoute: typeof AcademiaSlugRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  AcademiaIndexRoute: typeof AcademiaIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos': {
+      id: '/recursos'
+      path: '/recursos'
+      fullPath: '/recursos'
+      preLoaderRoute: typeof RecursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mongomail': {
+      id: '/mongomail'
+      path: '/mongomail'
+      fullPath: '/mongomail'
+      preLoaderRoute: typeof MongomailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +184,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academia/': {
+      id: '/academia/'
+      path: '/academia'
+      fullPath: '/academia/'
+      preLoaderRoute: typeof AcademiaIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academia/$slug': {
+      id: '/academia/$slug'
+      path: '/academia/$slug'
+      fullPath: '/academia/$slug'
+      preLoaderRoute: typeof AcademiaSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ComunidadRoute: ComunidadRoute,
+  MongomailRoute: MongomailRoute,
+  RecursosRoute: RecursosRoute,
+  SobreRoute: SobreRoute,
+  AcademiaSlugRoute: AcademiaSlugRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  AcademiaIndexRoute: AcademiaIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
