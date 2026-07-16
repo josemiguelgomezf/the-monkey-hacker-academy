@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Youtube, Twitter } from "lucide-react";
+import { Youtube, Instagram, Music2 } from "lucide-react";
 import { Logo } from "./Logo";
 import { useI18n } from "@/lib/i18n";
 
@@ -47,14 +47,14 @@ export function Footer() {
             </Link>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">{t("footer.tagline")}</p>
             <div className="mt-4 flex gap-3 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition" aria-label="YouTube">
+              <a href="https://www.youtube.com/@MongoHacker" target="_blank" rel="noreferrer" className="hover:text-primary transition" aria-label="YouTube">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-primary transition" aria-label="GitHub">
-                <Github className="h-5 w-5" />
+              <a href="https://www.instagram.com/mongohacker/" target="_blank" rel="noreferrer" className="hover:text-primary transition" aria-label="Instagram">
+                <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-primary transition" aria-label="Twitter">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.tiktok.com/@mongohacker" target="_blank" rel="noreferrer" className="hover:text-primary transition" aria-label="TikTok">
+                <Music2 className="h-5 w-5" />
               </a>
             </div>
           </div>

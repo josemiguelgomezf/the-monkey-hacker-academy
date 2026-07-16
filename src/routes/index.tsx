@@ -36,10 +36,10 @@ function Index() {
   const featuredArticles = articles.filter((a) => a.featured).slice(0, 2);
 
   const stats = [
-    { value: "12.000+", label: t("stats.students") },
-    { value: "180+", label: t("stats.articles") },
-    { value: "8.500+", label: t("stats.subscribers") },
-    { value: "24", label: t("stats.courses") },
+    { value: "782+", label: "Suscriptores YouTube" },
+    { value: "2.000+", label: "Seguidores Instagram" },
+    { value: "1.700+", label: "Seguidores TikTok" },
+    { value: "100+", label: "Suscriptores MongoMail" },
   ];
 
   return (
@@ -93,7 +93,7 @@ function Index() {
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  +12.000 alumnos ya están dentro
+                  Ya somos +4.500 monos entre YouTube, Instagram y TikTok
                 </p>
               </div>
             </div>

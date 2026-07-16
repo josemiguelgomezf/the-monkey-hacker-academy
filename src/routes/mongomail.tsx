@@ -37,7 +37,7 @@ function MongoMailPage() {
             </div>
             <div>
               <p className="text-xs font-mono text-primary uppercase tracking-wider">~/inbox</p>
-              <p className="font-display text-lg font-bold">8.500+ suscriptores</p>
+              <p className="font-display text-lg font-bold">100+ suscriptores</p>
             </div>
           </div>
           <NewsletterForm />
