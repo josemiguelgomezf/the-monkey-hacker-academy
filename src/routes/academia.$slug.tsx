@@ -92,7 +92,11 @@ function CoursePage() {
       <EnrollGate
         course={course}
         onDone={(payload) => {
-          const e: Enrollment = { ...payload, startedAt: new Date().toISOString() };
+          const e: Enrollment = {
+            name: payload.name ?? "Estudiante MongoHacker",
+            email: payload.email,
+            startedAt: new Date().toISOString(),
+          };
           localStorage.setItem(storageKey(course.slug), JSON.stringify(e));
           setEnrollment(e);
         }}
