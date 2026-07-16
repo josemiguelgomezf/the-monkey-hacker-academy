@@ -155,7 +155,7 @@ function EnrollGate({ course, onDone }: { course: Course; onDone: (p: { name: st
               placeholder="tu@email.com"
               requireName
               successMessage="¡Acceso desbloqueado! Empecemos."
-              onSuccess={onDone}
+              onSuccess={(p) => onDone({ name: p.name ?? "Estudiante MongoHacker", email: p.email })}
             />
           </div>
         </div>
