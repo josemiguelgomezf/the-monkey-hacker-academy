@@ -8,8 +8,7 @@ export function CourseCard({ course }: { course: Course }) {
   const { t, lang } = useI18n();
   const cat = categoryById(course.category);
   const Icon = cat.icon;
-
-  const levelKey = `common.${course.level}` as const;
+  const totalLessons = course.modules.reduce((n, m) => n + m.lessons.length, 0);
 
   return (
     <Link
@@ -45,9 +44,9 @@ export function CourseCard({ course }: { course: Course }) {
           <Clock className="h-3.5 w-3.5" /> {course.durationHours}h
         </span>
         <span className="flex items-center gap-1.5">
-          <BookOpen className="h-3.5 w-3.5" /> {course.lessons} {t("academy.lessons")}
+          <BookOpen className="h-3.5 w-3.5" /> {totalLessons} {t("academy.lessons")}
         </span>
-        <span className="text-primary">{t(levelKey)}</span>
+        <span className="text-primary">{t(`common.${course.level}` as const)}</span>
       </div>
     </Link>
   );
