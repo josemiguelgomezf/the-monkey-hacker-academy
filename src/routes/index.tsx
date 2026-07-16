@@ -93,7 +93,7 @@ function Index() {
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  +12.000 alumnos ya están dentro
+                  Ya somos +4.500 monos entre YouTube, Instagram y TikTok
                 </p>
               </div>
             </div>
