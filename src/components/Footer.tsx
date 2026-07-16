@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Youtube, Twitter } from "lucide-react";
+import { Youtube, Instagram, Music2 } from "lucide-react";
 import { Logo } from "./Logo";
 import { useI18n } from "@/lib/i18n";
 
