@@ -458,9 +458,431 @@ export const courses: Course[] = [
           "Una función solo de ChatGPT",
         ],
         answer: 1,
+    ],
+  },
+  {
+    slug: "automatiza-con-n8n",
+    title: {
+      es: "Automatiza tu trabajo con n8n",
+      en: "Automate your work with n8n",
+    },
+    summary: {
+      es: "Aprende a construir flujos de automatización con n8n desde cero: nodos, triggers, integraciones y un toque de IA. Sin saber programar.",
+      en: "Build automation flows with n8n from scratch: nodes, triggers, integrations and a touch of AI. No coding required.",
+    },
+    description: {
+      es: "Un curso práctico y directo pensado para personas que quieren ahorrar horas cada semana. Aprenderás qué es n8n, cómo funcionan los nodos y los triggers, cómo conectar apps como Gmail, Google Sheets, Telegram o Notion, cómo meter IA en tus flujos y cómo evitar los errores típicos que rompen una automatización en producción.",
+      en: "A hands-on course for people who want to save hours every week. You'll learn what n8n is, how nodes and triggers work, how to connect apps like Gmail, Google Sheets, Telegram or Notion, how to add AI to your flows and how to avoid the classic mistakes that break automations in production.",
+    },
+    category: "productivity",
+    level: "beginner",
+    durationHours: 3,
+    featured: true,
+    isNew: true,
+    passingScore: 70,
+    modules: [
+      {
+        id: "m1-fundamentos-n8n",
+        title: "Módulo 1 · Qué es n8n y por qué te va a cambiar la semana",
+        intro:
+          "Antes de tocar nada, entiende qué hace n8n, por qué es distinto a Zapier o Make y cuándo tiene sentido usarlo.",
+        lessons: [
+          {
+            id: "l1-que-es-n8n",
+            title: "¿Qué es n8n exactamente?",
+            minutes: 6,
+            content:
+              "**n8n** es una herramienta de automatización visual: arrastras \"nodos\" en un lienzo, los conectas con flechas y ejecutas un flujo que hace tareas por ti (enviar un email, actualizar una hoja, llamar a una IA, publicar en redes, etc.).\n\nLo hace parecido a Zapier o Make, con dos diferencias importantes:\n- Es **open source** y puedes autohospedarlo (tus datos, tu servidor).\n- Es mucho más **flexible**: puedes meter código, condiciones complejas y trabajar con APIs raras sin pagar planes premium.\n\nSi ya usas hojas de cálculo, formularios, emails y varias apps sueltas, n8n es el pegamento que las une.",
+          },
+          {
+            id: "l2-cloud-vs-self",
+            title: "Cloud vs. autohospedado: ¿cuál eliges?",
+            minutes: 5,
+            content:
+              "Tienes dos formas de usar n8n:\n\n**n8n Cloud:** te registras, pagas una cuota mensual y todo funciona sin instalar nada. Ideal para empezar y para quien no quiere mantener servidores.\n\n**Autohospedado:** instalas n8n en tu ordenador, en un VPS o en Docker. Es gratis y tus datos no salen de tu infraestructura, pero tú te encargas del mantenimiento y las actualizaciones.\n\nRegla práctica: **empieza en la nube para aprender**. Cuando tengas flujos serios con datos sensibles, plantéate autohospedar.",
+          },
+          {
+            id: "l3-cuando-usar",
+            title: "Cuándo n8n es tu mejor amigo (y cuándo no)",
+            minutes: 5,
+            content:
+              "**Buenos casos:**\n- Sincronizar datos entre apps (CRM ↔ hoja ↔ email).\n- Notificaciones automáticas en Telegram/Slack cuando pasa algo.\n- Procesar formularios y enviarlos a varios sitios a la vez.\n- Añadir IA a un proceso: clasificar, resumir, generar respuestas.\n- Scraping ligero y procesamiento programado.\n\n**Malos casos:**\n- Cálculos ultrarrápidos en tiempo real de miles de eventos por segundo.\n- Lógica de negocio crítica sin supervisión ni tests.\n- Todo lo que ya hace bien una función nativa de la propia app.",
+          },
+          {
+            id: "l4-interfaz",
+            title: "Tour rápido por la interfaz",
+            minutes: 4,
+            content:
+              "Al abrir n8n verás:\n\n- **Canvas** (lienzo): el espacio donde diseñas el flujo.\n- **Panel de nodos**: catálogo de integraciones y utilidades.\n- **Executions**: historial de cada vez que se ejecutó tu flujo, con datos y errores.\n- **Credentials**: donde guardas de forma segura tus claves de API y OAuth.\n\nCada workflow se activa o desactiva con un toggle. Si está desactivado, no se ejecuta aunque llegue un evento.",
+          },
+        ],
+        quiz: [
+          {
+            q: "¿Qué es n8n?",
+            options: [
+              "Una IA generativa parecida a ChatGPT",
+              "Una herramienta de automatización visual open source",
+              "Una base de datos NoSQL",
+              "Un editor de código en la nube",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Cuál es una ventaja clave de autohospedar n8n?",
+            options: [
+              "Es más bonito visualmente",
+              "Tus datos no salen de tu infraestructura y no pagas por ejecución",
+              "Es más rápido que la nube siempre",
+              "No necesita nodos",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Cuál de estos es un buen caso para n8n?",
+            options: [
+              "Procesar millones de eventos por segundo en tiempo real",
+              "Sincronizar leads del formulario web con tu CRM y avisar por Telegram",
+              "Reemplazar tu sistema bancario",
+              "Compilar código C++",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Para qué sirve la sección de Credentials?",
+            options: [
+              "Para escribir código JavaScript",
+              "Para guardar de forma segura tus claves API y conexiones OAuth",
+              "Para ver el historial de ejecuciones",
+              "Para invitar a otros usuarios",
+            ],
+            answer: 1,
+          },
+        ],
+      },
+      {
+        id: "m2-nodos-triggers",
+        title: "Módulo 2 · Nodos y triggers: los ladrillos del flujo",
+        intro:
+          "Todo flujo de n8n es una cadena de nodos que empieza por un trigger. Domina esto y ya sabes automatizar.",
+        lessons: [
+          {
+            id: "l1-anatomia",
+            title: "Anatomía de un workflow",
+            minutes: 5,
+            content:
+              "Un workflow tiene tres piezas:\n\n1. **Trigger:** el nodo que arranca todo. Puede ser un evento (nuevo email, fila en Sheets), un webhook o un horario (cron).\n2. **Nodos de acción:** hacen algo — llamar a una API, enviar mensaje, transformar datos.\n3. **Conexiones:** flechas que mueven los datos de un nodo al siguiente.\n\nCada nodo recibe **items** (objetos JSON) y devuelve items. Esa es la moneda de cambio dentro de n8n.",
+          },
+          {
+            id: "l2-tipos-triggers",
+            title: "Tipos de triggers que vas a usar",
+            minutes: 6,
+            content:
+              "Los más habituales:\n\n- **Manual Trigger:** para probar el flujo mientras lo diseñas.\n- **Webhook:** n8n te da una URL; cuando alguien hace POST/GET a esa URL, el flujo se lanza. Perfecto para formularios, integraciones custom o recibir pings de otros sistemas.\n- **Schedule (cron):** se ejecuta cada X minutos, cada día a una hora, etc.\n- **App triggers:** \"nuevo email en Gmail\", \"nueva fila en Google Sheets\", \"mensaje en Telegram\". Cada integración trae los suyos.\n\nEmpieza siempre con Manual Trigger + datos de ejemplo para depurar, y cambia al trigger real cuando funcione.",
+          },
+          {
+            id: "l3-expresiones",
+            title: "Expresiones: hablar el idioma de n8n",
+            minutes: 6,
+            content:
+              "Para usar datos de nodos anteriores usas **expresiones**. Sintaxis: `{{ $json.campo }}`.\n\nEjemplos:\n- `{{ $json.email }}` → coge el email del item actual.\n- `{{ $node[\"Gmail\"].json.subject }}` → coge el asunto del nodo Gmail.\n- `{{ $now.toFormat('yyyy-MM-dd') }}` → fecha de hoy formateada.\n\nCon esto ya puedes personalizar mensajes: \"Hola {{ $json.nombre }}, gracias por registrarte.\" Sin escribir código, solo con doble llaves.",
+          },
+          {
+            id: "l4-error-handling",
+            title: "Manejo de errores sin morir en el intento",
+            minutes: 5,
+            content:
+              "Los flujos fallan. Es normal. Lo importante es no perder datos.\n\nBuenas prácticas:\n- Activa **\"Continue On Fail\"** en nodos donde un fallo puntual no debe romper todo.\n- Crea un **Error Workflow**: n8n ejecuta ese workflow separado cuando el principal falla, y te avisa por email/Telegram.\n- Revisa **Executions** con frecuencia los primeros días.\n- Añade nodos **If** o **Switch** para validar datos antes de escribir en sitios sensibles.",
+          },
+        ],
+        quiz: [
+          {
+            q: "¿Qué es un trigger?",
+            options: [
+              "Un tipo de credencial",
+              "El nodo que arranca la ejecución del workflow",
+              "Un botón de emergencia",
+              "Un lenguaje de programación",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Qué hace un nodo Webhook?",
+            options: [
+              "Envía emails masivos",
+              "Da una URL a la que otros sistemas pueden llamar para lanzar el flujo",
+              "Guarda credenciales",
+              "Ejecuta código Python",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Cómo se lee el campo `email` del item actual en una expresión?",
+            options: [
+              "$email",
+              "{{ email }}",
+              "{{ $json.email }}",
+              "get('email')",
+            ],
+            answer: 2,
+          },
+          {
+            q: "¿Cuál es una buena práctica ante errores?",
+            options: [
+              "Ignorar la sección Executions",
+              "Configurar un Error Workflow que notifique cuando algo falla",
+              "Desactivar todos los flujos al primer error",
+              "Reescribir el flujo desde cero cada semana",
+            ],
+            answer: 1,
+          },
+        ],
+      },
+      {
+        id: "m3-integraciones",
+        title: "Módulo 3 · Integraciones estrella: Gmail, Sheets, Telegram, Notion",
+        intro:
+          "Vamos a lo práctico: conectar las apps que ya usas a diario para que hablen entre ellas.",
+        lessons: [
+          {
+            id: "l1-credenciales",
+            title: "Cómo funcionan las credenciales (OAuth y API keys)",
+            minutes: 5,
+            content:
+              "Cada app se conecta de dos maneras:\n\n- **OAuth:** te redirige al login de la app (Google, Notion, Slack) y das permiso a n8n. Es lo más seguro y lo estándar hoy.\n- **API key:** copias una clave desde la app y la pegas en n8n.\n\nGuardar bien las credenciales es clave: **una credencial se reutiliza en muchos flujos**. Si cambia tu contraseña o rotas la key, actualizas un solo sitio.",
+          },
+          {
+            id: "l2-gmail-sheets",
+            title: "Ejemplo real: Gmail → Google Sheets",
+            minutes: 7,
+            content:
+              "Flujo típico:\n\n1. **Trigger Gmail:** \"nuevo email con etiqueta Facturas\".\n2. **Nodo IA (opcional):** extrae importe, proveedor y fecha del cuerpo del email.\n3. **Google Sheets → Append Row:** añade una fila con los datos.\n4. **Gmail → Add Label:** marca el email como procesado.\n\nEn 4 nodos tienes un pequeño ERP casero que te ahorra registrar facturas a mano cada mes.",
+          },
+          {
+            id: "l3-telegram-notion",
+            title: "Notificaciones útiles con Telegram y Notion",
+            minutes: 6,
+            content:
+              "**Telegram** es el canal favorito para avisos internos: creas un bot en @BotFather, metes el token en n8n y ya puedes enviar mensajes a tu chat o a un grupo del equipo.\n\n**Notion** funciona como base de datos ligera. Puedes crear páginas, actualizar propiedades o consultar bases desde n8n.\n\nCombinación potente: cuando llegue un lead al formulario → crea página en Notion + avisa por Telegram con el resumen. Cero copiar y pegar.",
+          },
+          {
+            id: "l4-http-request",
+            title: "El nodo HTTP Request: la llave maestra",
+            minutes: 5,
+            content:
+              "Cuando una app no tiene integración nativa, casi siempre tiene **API REST**. Con el nodo **HTTP Request** puedes llamar a cualquier endpoint HTTP: GET, POST, PUT, DELETE, con headers y body personalizados.\n\nEsto significa que n8n puede hablar con **cualquier servicio del mundo** que tenga API. Es lo que lo separa de herramientas más cerradas.\n\nConsejo: guarda tokens y URLs base en credenciales o variables, no los hardcodees en el nodo.",
+          },
+        ],
+        quiz: [
+          {
+            q: "¿Qué ventaja tiene guardar credenciales en n8n?",
+            options: [
+              "Que se ejecutan más rápido",
+              "Que se reutilizan en muchos flujos y las actualizas en un solo sitio",
+              "Que la app te da descuentos",
+              "Que se cifran automáticamente en tus emails",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Qué hace un nodo \"Google Sheets → Append Row\"?",
+            options: [
+              "Borra la hoja",
+              "Añade una nueva fila con los datos que le pases",
+              "Ordena la hoja alfabéticamente",
+              "Crea una nueva pestaña",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Para qué sirve el nodo HTTP Request?",
+            options: [
+              "Solo para hacer descargas de imágenes",
+              "Para llamar a cualquier API REST que no tenga integración nativa",
+              "Para reiniciar el servidor",
+              "Para enviar SMS",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Qué integración es ideal para avisos internos rápidos al equipo?",
+            options: ["Excel", "Telegram", "PowerPoint", "MySQL"],
+            answer: 1,
+          },
+        ],
+      },
+      {
+        id: "m4-ia-en-flujos",
+        title: "Módulo 4 · Añade IA a tus automatizaciones",
+        intro:
+          "Meter un modelo de IA en tus flujos multiplica lo que puedes hacer. Vamos a verlo con casos concretos.",
+        lessons: [
+          {
+            id: "l1-nodos-ia",
+            title: "Los nodos de IA en n8n",
+            minutes: 6,
+            content:
+              "n8n trae nodos oficiales para los grandes modelos:\n\n- **OpenAI** (ChatGPT, embeddings, imágenes).\n- **Anthropic** (Claude).\n- **Google Gemini**.\n- Y modelos abiertos vía HTTP Request u Ollama.\n\nEl más usado es el nodo **OpenAI → Message a Model**. Le pasas un prompt (idealmente con la metodología CRAFT que vimos en el curso de IA) y devuelve la respuesta como texto listo para usar en el siguiente nodo.",
+          },
+          {
+            id: "l2-clasificar",
+            title: "Caso 1: clasificar emails con IA",
+            minutes: 6,
+            content:
+              "Flujo:\n\n1. **Gmail Trigger:** llega email nuevo.\n2. **OpenAI:** prompt tipo \"Clasifica este email en una de estas categorías: Soporte, Ventas, Spam, Otro. Responde solo con la categoría.\"\n3. **Switch:** enruta según la categoría.\n4. Cada rama hace algo distinto: crear ticket, avisar al comercial, borrar, ignorar.\n\nEn 15 minutos tienes un triaje que antes te robaba media hora al día.",
+          },
+          {
+            id: "l3-resumen",
+            title: "Caso 2: resúmenes automáticos y respuestas borrador",
+            minutes: 6,
+            content:
+              "Otro clásico: reuniones o hilos largos.\n\n- Grabas una reunión → transcribes con Whisper → n8n coge la transcripción → OpenAI resume en 5 bullets + próximas acciones → todo va a tu Notion.\n- O bien: llega email largo → IA resume + genera borrador de respuesta → te lo mandan por Telegram para aprobar antes de enviar.\n\nRegla: **la IA propone, tú apruebas.** Especialmente los primeros días.",
+          },
+          {
+            id: "l4-buenas-practicas",
+            title: "Buenas prácticas cuando mezclas IA + automatización",
+            minutes: 5,
+            content:
+              "Cosas que ahorran disgustos:\n\n- **No metas datos sensibles** en modelos públicos sin RGPD.\n- **Limita el prompt**: si le pasas 20 páginas cada ejecución, la factura se dispara.\n- Guarda **logs** de las respuestas de la IA en una hoja o base de datos: te permite auditar.\n- Añade un nodo **If** después de la IA para validar que la respuesta tiene el formato que esperabas (JSON válido, categoría dentro de la lista, etc.).\n- Ten un **plan B** si la API de IA cae: no bloquees el flujo entero.",
+          },
+        ],
+        quiz: [
+          {
+            q: "¿Cómo se enruta un flujo según la categoría que devuelve la IA?",
+            options: [
+              "Con un nodo Webhook",
+              "Con un nodo Switch (o If) que evalúa la salida",
+              "Reiniciando n8n",
+              "No se puede",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Cuál es la regla de oro al mezclar IA y automatización?",
+            options: [
+              "La IA aprueba y ejecuta, tú no miras",
+              "La IA propone, tú apruebas (sobre todo al principio)",
+              "Nunca uses IA en flujos",
+              "Usa siempre el modelo más caro",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Por qué conviene guardar logs de las respuestas de IA?",
+            options: [
+              "Porque n8n los borra automáticamente",
+              "Para poder auditar qué respondió y depurar fallos",
+              "Para venderlos",
+              "Porque lo exige la ley siempre",
+            ],
+            answer: 1,
+          },
+          {
+            q: "¿Qué debes hacer si la respuesta de la IA no tiene el formato esperado?",
+            options: [
+              "Ignorar el problema",
+              "Poner un nodo If/validación y actuar en consecuencia",
+              "Reiniciar el ordenador",
+              "Cambiar de trigger",
+            ],
+            answer: 1,
+          },
+        ],
+      },
+    ],
+    finalExam: [
+      {
+        q: "¿Qué es n8n?",
+        options: [
+          "Un modelo de IA",
+          "Una herramienta de automatización visual open source",
+          "Un lenguaje de programación",
+          "Un editor de vídeo",
+        ],
+        answer: 1,
+      },
+      {
+        q: "¿Qué pieza arranca la ejecución de un workflow?",
+        options: ["El nodo final", "El trigger", "La credencial", "El canvas"],
+        answer: 1,
+      },
+      {
+        q: "¿Cómo se accede al campo `nombre` del item actual dentro de una expresión?",
+        options: [
+          "{{ nombre }}",
+          "{{ $json.nombre }}",
+          "$get('nombre')",
+          "@nombre",
+        ],
+        answer: 1,
+      },
+      {
+        q: "¿Para qué sirve un Webhook trigger?",
+        options: [
+          "Para enviar emails cada hora",
+          "Para exponer una URL que otros sistemas pueden llamar y disparar el flujo",
+          "Para hacer login en Google",
+          "Para instalar plugins",
+        ],
+        answer: 1,
+      },
+      {
+        q: "¿Cuál es una buena razón para autohospedar n8n?",
+        options: [
+          "Que los datos sensibles se queden en tu infraestructura",
+          "Que sea más lento",
+          "Que tenga menos nodos",
+          "Que no admita OAuth",
+        ],
+        answer: 0,
+      },
+      {
+        q: "¿Qué nodo te permite hablar con cualquier API REST del mundo?",
+        options: ["Gmail", "HTTP Request", "Schedule Trigger", "Set"],
+        answer: 1,
+      },
+      {
+        q: "¿Cuál es una buena práctica ante errores en producción?",
+        options: [
+          "Configurar un Error Workflow que notifique cuando algo falla",
+          "No mirar la sección Executions",
+          "Desactivar todos los flujos",
+          "Borrar credenciales cada semana",
+        ],
+        answer: 0,
+      },
+      {
+        q: "Al añadir IA a un flujo, ¿qué conviene hacer después de la respuesta del modelo?",
+        options: [
+          "Enviarla directamente al cliente sin revisar",
+          "Validar el formato con un If/Switch antes de continuar",
+          "Reiniciar n8n",
+          "Duplicar el flujo",
+        ],
+        answer: 1,
+      },
+      {
+        q: "¿Cuál es un buen caso de uso para n8n + IA?",
+        options: [
+          "Clasificar emails entrantes y enrutar a la acción correspondiente",
+          "Reemplazar el sistema contable auditado",
+          "Tomar decisiones médicas sin humano",
+          "Compilar código nativo",
+        ],
+        answer: 0,
+      },
+      {
+        q: "¿Cuál es la mejor forma de empezar con n8n?",
+        options: [
+          "Automatizar de golpe todos los procesos críticos",
+          "Empezar en la nube con un flujo pequeño y validar antes de escalar",
+          "Autohospedar sin haber probado nunca",
+          "No usar credenciales para ir más rápido",
+        ],
+        answer: 1,
       },
     ],
   },
 ];
 
 export const courseBySlug = (slug: string) => courses.find((c) => c.slug === slug);
+
