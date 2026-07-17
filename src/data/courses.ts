@@ -458,6 +458,7 @@ export const courses: Course[] = [
           "Una función solo de ChatGPT",
         ],
         answer: 1,
+      },
     ],
   },
   {
