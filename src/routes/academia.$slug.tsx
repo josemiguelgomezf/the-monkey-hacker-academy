@@ -788,11 +788,24 @@ function generateCertificate({ name, course, hours, score }: { name: string; cou
   ctx.font = "16px monospace";
   ctx.fillText("mongohacker.academy · </> 1010", canvas.width / 2, 1080);
 
-  const link = document.createElement("a");
-  const safe = name.replace(/[^a-z0-9]+/gi, "-").toLowerCase();
-  link.download = `certificado-mongohacker-${safe}.png`;
-  link.href = canvas.toDataURL("image/png");
-  link.click();
+  const safe = name.replace(/[^a-z0-9]+/gi, "-").toLowerCase() || "estudiante";
+  const filename = `certificado-mongohacker-${safe}.png`;
+
+  canvas.toBlob((blob) => {
+    if (!blob) {
+      toast.error("No pudimos generar el certificado. Inténtalo de nuevo.");
+      return;
+    }
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    link.rel = "noopener";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }, "image/png");
 }
 
 function wrapText(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, maxWidth: number, lineHeight: number) {
