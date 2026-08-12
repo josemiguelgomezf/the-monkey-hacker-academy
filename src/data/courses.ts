@@ -52,7 +52,7 @@ export const courses: Course[] = [
     },
     description: {
       es: "Un curso corto y directo pensado para personas sin base técnica. En unas 2 horas dominarás el vocabulario real de la IA generativa (prompt, token, contexto, sesión, memoria), aprenderás la metodología CRAFT para escribir prompts que funcionan, conocerás las diferencias entre ChatGPT, Claude, Gemini, DeepSeek y Copilot, y sabrás decidir cuándo automatizar un proceso con IA y cuándo no.",
-      en: "A short, direct course for non-technical people. In about 2 hours you'll master the real vocabulary of generative AI (prompt, token, context, session, memory), learn the CRAFT methodology for prompts that work, understand the differences between ChatGPT, Claude, Gemini, DeepSeek and Copilot, and know when to automate a process with AI and when not to.",
+      en: "A short, direct course for non-technical people. In about 2 hours you'll master the real vocabulary of generative AI (prompt, token, context, session, memory), learn the CRAFT methodology for prompts that work, understand the differences between ChatGPT, Claude, Gemini, DeepSeek and Copilot, and know when to automate a process with AI and when not.",
     },
     category: "ai",
     level: "beginner",
@@ -677,7 +677,7 @@ export const courses: Course[] = [
           {
             q: "¿Qué ventaja tiene guardar credenciales en n8n?",
             options: [
-              "Que se ejecutan más rápido",
+              "Que se ejecuten más rápido",
               "Que se reutilizan en muchos flujos y las actualizas en un solo sitio",
               "Que la app te da descuentos",
               "Que se cifran automáticamente en tus emails",
@@ -915,62 +915,28 @@ export const courses: Course[] = [
             title: "Ciberseguridad en una frase",
             minutes: 6,
             content:
-              "La ciberseguridad es la práctica de proteger tus dispositivos, cuentas, datos y comunicaciones frente a personas o programas malintencionados.
-
-No se trata de ser un experto técnico: se trata de entender los riesgos más comunes y tomar decisiones inteligentes. Igual que cerramos la puerta de casa o no dejamos el coche con las llaves puestas, en internet hay gestos básicos que marcan la diferencia.
-
-**Los tres pilares de la ciberseguridad personal:**
-- **Confidencialidad:** que solo tú veas lo que es tuyo.
-- **Integridad:** que tus datos no sean alterados sin que te enteres.
-- **Disponibilidad:** que puedas acceder a lo tuyo cuando lo necesites.
-
-Cada medida que tomes protege uno o varios de estos pilares.",
+              "La ciberseguridad es la práctica de proteger tus dispositivos, cuentas, datos y comunicaciones frente a personas o programas malintencionados.\n\nNo se trata de ser un experto técnico: se trata de entender los riesgos más comunes y tomar decisiones inteligentes. Igual que cerramos la puerta de casa o no dejamos el coche con las llaves puestas, en internet hay gestos básicos que marcan la diferencia.\n\n**Los tres pilares de la ciberseguridad personal:**\n- **Confidencialidad:** que solo tú veas lo que es tuyo.\n- **Integridad:** que tus datos no sean alterados sin que te enteres.\n- **Disponibilidad:** que puedas acceder a lo tuyo cuando lo necesites.\n\nCada medida que tomes protege uno o varios de estos pilares.",
           },
           {
             id: "l2-riesgos",
             title: "Los riesgos reales a los que te enfrentas cada día",
             minutes: 7,
             content:
-              "Los ciberdelincuentes no buscan a la víctima perfecta: buscan la más fácil. La mayoría de ataques masivos son automatizados y apuntan a errores humanos comunes.
-
-**Riesgos principales para personas normales:**
-- **Robo de credenciales:** consiguen tu email y contraseña y acceden a cuentas bancarias, redes sociales o correo.
-- **Phishing:** te engañan para que entres datos en una web falsa.
-- **Malware:** programas que espían, roban o bloquean tus archivos.
-- **Estafas:** desde el falso primo en apuros hasta ofertas de inversión imposibles.
-- **Pérdida de datos:** por un fallo, un robo o un ransomware que encripta tus archivos.
-
-El buen ciberhábito no es paranoico: es consciente. No hay que vivir con miedo, hay que vivir con criterio.",
+              "Los ciberdelincuentes no buscan a la víctima perfecta: buscan la más fácil. La mayoría de ataques masivos son automatizados y apuntan a errores humanos comunes.\n\n**Riesgos principales para personas normales:**\n- **Robo de credenciales:** consiguen tu email y contraseña y acceden a cuentas bancarias, redes sociales o correo.\n- **Phishing:** te engañan para que entres datos en una web falsa.\n- **Malware:** programas que espían, roban o bloquean tus archivos.\n- **Estafas:** desde el falso primo en apuros hasta ofertas de inversión imposibles.\n- **Pérdida de datos:** por un fallo, un robo o un ransomware que encripta tus archivos.\n\nEl buen ciberhábito no es paranoico: es consciente. No hay que vivir con miedo, hay que vivir con criterio.",
           },
           {
             id: "l3-ataques-comunes",
             title: "Cómo piensa un atacante (y cómo usar eso en tu favor)",
             minutes: 6,
             content:
-              "Los atacantes usan cuatro palancas psicológicas una y otra vez: **miedo, urgencia, curiosidad y confianza**. Si un mensaje te apura, te asusta o te promete algo demasiado bueno, párate.
-
-**Tácticas habituales:**
-- **Suplantación de identidad:** hacen pasar un email o mensaje por de tu banco, jefe o familiar.
-- **Ingeniería social:** recopilan pequeños datos tuyos (redes sociales, filtraciones) para construir un engaño creíble.
-- **Señuelos técnicos:** enlaces, adjuntos, actualizaciones falsas, apps de dudosa procedencia.
-- **Aprovechar la pereza:** aprovechan que no actualizamos, que reutilizamos contraseñas o que no revisamos configuraciones.
-
-Cuando entiendes el juego, dejas de ser presa fácil.",
+              "Los atacantes usan cuatro palancas psicológicas una y otra vez: **miedo, urgencia, curiosidad y confianza**. Si un mensaje te apura, te asusta o te promete algo demasiado bueno, párate.\n\n**Tácticas habituales:**\n- **Suplantación de identidad:** hacen pasar un email o mensaje por de tu banco, jefe o familiar.\n- **Ingeniería social:** recopilan pequeños datos tuyos (redes sociales, filtraciones) para construir un engaño creíble.\n- **Señuelos técnicos:** enlaces, adjuntos, actualizaciones falsas, apps de dudosa procedencia.\n- **Aprovechar la pereza:** aprovechan que no actualizamos, que reutilizamos contraseñas o que no revisamos configuraciones.\n\nCuando entiendes el juego, dejas de ser presa fácil.",
           },
           {
             id: "l4-habitos",
             title: "El marco de los cinco hábitos básicos",
             minutes: 5,
             content:
-              "Todo el curso se resume en cinco hábitos:
-
-1. **Proteger las cuentas:** contraseñas fuertes + doble factor.
-2. **Detectar engaños:** aprender a leer emails, webs y mensajes con ojo crítico.
-3. **Mantener actualizado:** sistemas, apps y dispositivos.
-4. **Hacer copias de seguridad:** tener un plan cuando algo falla.
-5. **Compartir con criterio:** saber qué datos doy, a quién y durante cuánto tiempo.
-
-Si dominas estos cinco hábitos, estarás por encima del 90% de la población en seguridad digital.",
+              "Todo el curso se resume en cinco hábitos:\n\n1. **Proteger las cuentas:** contraseñas fuertes + doble factor.\n2. **Detectar engaños:** aprender a leer emails, webs y mensajes con ojo crítico.\n3. **Mantener actualizado:** sistemas, apps y dispositivos.\n4. **Hacer copias de seguridad:** tener un plan cuando algo falla.\n5. **Compartir con criterio:** saber qué datos doy, a quién y durante cuánto tiempo.\n\nSi dominas estos cinco hábitos, estarás por encima del 90% de la población en seguridad digital.",
           },
         ],
         quiz: [
@@ -1022,72 +988,28 @@ Si dominas estos cinco hábitos, estarás por encima del 90% de la población en
             title: "¿Qué es exactamente el phishing?",
             minutes: 6,
             content:
-              "**Phishing** es un engaño que imita a una persona, empresa o servicio de confianza para robarte datos, dinero o acceso a tus cuentas.
-
-El cebo suele ser un mensaje (email, SMS, WhatsApp, red social) que pide:
-- Confirmar tu contraseña.
-- Pagar una multa o recibo urgente.
-- Descargar un archivo o actualización.
-- Hacer clic en un enlace por un problema de seguridad.
-
-El objetivo siempre es el mismo: que actúes sin pensar.
-
-**Regla de oro:** ningún banco, empresa seria o administración pública te pedirá contraseña o datos bancarios por email o mensaje.",
+              "**Phishing** es un engaño que imita a una persona, empresa o servicio de confianza para robarte datos, dinero o acceso a tus cuentas.\n\nEl cebo suele ser un mensaje (email, SMS, WhatsApp, red social) que pide:\n- Confirmar tu contraseña.\n- Pagar una multa o recibo urgente.\n- Descargar un archivo o actualización.\n- Hacer clic en un enlace por un problema de seguridad.\n\nEl objetivo siempre es el mismo: que actúes sin pensar.\n\n**Regla de oro:** ningún banco, empresa seria o administración pública te pedirá contraseña o datos bancarios por email o mensaje.",
           },
           {
             id: "l2-tipos-phishing",
             title: "Tipos de phishing que verás en el día a día",
             minutes: 7,
             content:
-              "El phishing ha evolucionado mucho. Estas son sus formas más frecuentes:
-
-- **Email phishing:** el clásico. Mensaje falso de banco, Amazon, Netflix, correos, etc.
-- **Spear phishing:** ataque dirigido a ti personalmente, con datos reales tuyos para sonar creíble.
-- **Smishing:** phishing por SMS. Ej: "Tu paquete está retenido, paga aquí".
-- **Vishing:** phishing por llamada de teléfono. Ej: alguien que se hace pasar por tu banco o por Microsoft.
-- **Phishing en redes sociales:** perfiles falsos, comentarios con enlaces, ofertas imposibles.
-- **CEO fraud:** suplantan a un jefe o directivo para pedir un pago urgente.
-
-Cuanto más personalizado, más peligroso. Pero siempre deja señales.",
+              "El phishing ha evolucionado mucho. Estas son sus formas más frecuentes:\n\n- **Email phishing:** el clásico. Mensaje falso de banco, Amazon, Netflix, correos, etc.\n- **Spear phishing:** ataque dirigido a ti personalmente, con datos reales tuyos para sonar creíble.\n- **Smishing:** phishing por SMS. Ej: \"Tu paquete está retenido, paga aquí\".\n- **Vishing:** phishing por llamada de teléfono. Ej: alguien que se hace pasar por tu banco o por Microsoft.\n- **Phishing en redes sociales:** perfiles falsos, comentarios con enlaces, ofertas imposibles.\n- **CEO fraud:** suplantan a un jefe o directivo para pedir un pago urgente.\n\nCuanto más personalizado, más peligroso. Pero siempre deja señales.",
           },
           {
             id: "l3-detectar",
             title: "Cómo detectar un phishing en 30 segundos",
             minutes: 8,
             content:
-              "Antes de hacer clic o responder, revisa estas señales:
-
-**1. El remitente:**
-- Comprueba la dirección completa, no solo el nombre. **soporte@amazon.com** no es lo mismo que **soporte@amazon-seguridad.com**.
-- Desconfía de dominios con guiones, números o extensiones raras.
-
-**2. El enlace:**
-- Pasa el ratón por encima (sin clicar) y mira la URL real en la esquina inferior del navegador.
-- Nunca introduzcas datos en un enlace que llegó por mensaje. Ve tú a la web oficial escribiendo la dirección.
-
-**3. El tono y la urgencia:**
-- "Tu cuenta será eliminada en 24 horas", "paquete retenido", "hackeo detectado". La urgencia es una trampa.
-- Faltas de ortografía, traducciones extrañas o logos mal recortados son señales de alerta.
-
-**4. Los adjuntos:**
-- No abras archivos inesperados, aunque parezcan de alguien conocido. Confirma por otro canal.
-
-Si dudas, no actúes. Verifica por otro medio.",
+              "Antes de hacer clic o responder, revisa estas señales:\n\n**1. El remitente:**\n- Comprueba la dirección completa, no solo el nombre. **soporte@amazon.com** no es lo mismo que **soporte@amazon-seguridad.com**.\n- Desconfía de dominios con guiones, números o extensiones raras.\n\n**2. El enlace:**\n- Pasa el ratón por encima (sin clicar) y mira la URL real en la esquina inferior del navegador.\n- Nunca introduzcas datos en un enlace que llegó por mensaje. Ve tú a la web oficial escribiendo la dirección.\n\n**3. El tono y la urgencia:**\n- \"Tu cuenta será eliminada en 24 horas\", \"paquete retenido\", \"hackeo detectado\". La urgencia es una trampa.\n- Faltas de ortografía, traducciones extrañas o logos mal recortados son señales de alerta.\n\n**4. Los adjuntos:**\n- No abras archivos inesperados, aunque parezcan de alguien conocido. Confirma por otro canal.\n\nSi dudas, no actúes. Verifica por otro medio.",
           },
           {
             id: "l4-estafas-redes",
             title: "Estafas en redes, marketplaces y apps de citas",
             minutes: 6,
             content:
-              "No todo el phishing va por email. En redes sociales y apps de compraventa hay estafas muy sofisticadas:
-
-- **Romance scam:** alguien construye una relación falsa durante semanas para pedirte dinero.
-- **Inversión falsa:** criptomonedas, forex o negocios que prometen rentabilidades imposibles.
-- **Compra/venta fraudulenta:** te piden adelanto, envío o un "seguro" que no existe.
-- **Sorteos y premios:** "has ganado un iPhone, solo paga el envío". Falso.
-- **Perfiles clonados:** un amigo "te pide ayuda" desde una cuenta nueva.
-
-**Consejo universal:** si alguien te pide dinero, datos o que instales algo, para y verifica por otro canal. Ninguna oportunidad real desaparece en 5 minutos.",
+              "No todo el phishing va por email. En redes sociales y apps de compraventa hay estafas muy sofisticadas:\n\n- **Romance scam:** alguien construye una relación falsa durante semanas para pedirte dinero.\n- **Inversión falsa:** criptomonedas, forex o negocios que prometen rentabilidades imposibles.\n- **Compra/venta fraudulenta:** te piden adelanto, envío o un \"seguro\" que no existe.\n- **Sorteos y premios:** \"has ganado un iPhone, solo paga el envío\". Falso.\n- **Perfiles clonados:** un amigo \"te pide ayuda\" desde una cuenta nueva.\n\n**Consejo universal:** si alguien te pide dinero, datos o que instales algo, para y verifica por otro canal. Ninguna oportunidad real desaparece en 5 minutos.",
           },
         ],
         quiz: [
@@ -1144,77 +1066,28 @@ Si dudas, no actúes. Verifica por otro medio.",
             title: "Contraseñas: por qué casi todo el mundo las hace mal",
             minutes: 7,
             content:
-              "La contraseña más segura del mundo no sirve si la reutilizas. Cuando una web sufre una filtración, los atacantes pruean tu email y contraseña en cientos de servicios más.
-
-**Buenas prácticas:**
-- Usa **contraseñas largas y únicas** para cada servicio. Una frase de 4 palabras aleatorias es mejor que **P@ssw0rd123**.
-- No uses datos personales: cumpleaños, nombres de mascotas o DNI son fáciles de adivinar.
-- Activa **el doble factor de autenticación (2FA/MFA)** siempre que puedas.
-- Usa un **gestor de contraseñas** para no tener que memorizarlas todas.
-
-**¿Qué es un gestor de contraseñas?**
-Es una aplicación que guarda tus contraseñas cifradas y las rellena automáticamente. Tú solo recuerdas una contraseña maestra muy fuerte.
-
-Ejemplos populares: Bitwarden, KeePass, 1Password, Proton Pass. Muchos navegadores también lo hacen, aunque un gestor dedicado suele ser más robusto.",
+              "La contraseña más segura del mundo no sirve si la reutilizas. Cuando una web sufre una filtración, los atacantes prueban tu email y contraseña en cientos de servicios más.\n\n**Buenas prácticas:**\n- Usa **contraseñas largas y únicas** para cada servicio. Una frase de 4 palabras aleatorias es mejor que **P@ssw0rd123**.\n- No uses datos personales: cumpleaños, nombres de mascotas o DNI son fáciles de adivinar.\n- Activa **el doble factor de autenticación (2FA/MFA)** siempre que puedas.\n- Usa un **gestor de contraseñas** para no tener que memorizarlas todas.\n\n**¿Qué es un gestor de contraseñas?**\nEs una aplicación que guarda tus contraseñas cifradas y las rellena automáticamente. Tú solo recuerdas una contraseña maestra muy fuerte.\n\nEjemplos populares: Bitwarden, KeePass, 1Password, Proton Pass. Muchos navegadores también lo hacen, aunque un gestor dedicado suele ser más robusto.",
           },
           {
             id: "l2-2fa",
             title: "Doble factor de autenticación: la barrera que más protege",
             minutes: 6,
             content:
-              "El **doble factor (2FA)** añade una segunda prueba después de la contraseña. Así, aunque alguien la robe, no puede entrar.
-
-**Tipos de 2FA, ordenados de más a menos seguro:**
-1. **Claves de seguridad físicas** (YubiKey, Titan): lo más seguro.
-2. **Aplicaciones autenticadoras** (Google Authenticator, Authy, Microsoft Authenticator): generan códigos temporales en tu móvil.
-3. **SMS o email:** mejor que nada, pero vulnerables a SIM swapping o hackeo de correo.
-
-**Consejo:** activa 2FA en email, banca, redes sociales, almacenamiento en la nube y cualquier servicio importante. Empieza por el email: si proteges el correo, proteges la llave maestra de recuperación de contraseñas.",
+              "El **doble factor (2FA)** añade una segunda prueba después de la contraseña. Así, aunque alguien la robe, no puede entrar.\n\n**Tipos de 2FA, ordenados de más a menos seguro:**\n1. **Claves de seguridad físicas** (YubiKey, Titan): lo más seguro.\n2. **Aplicaciones autenticadoras** (Google Authenticator, Authy, Microsoft Authenticator): generan códigos temporales en tu móvil.\n3. **SMS o email:** mejor que nada, pero vulnerables a SIM swapping o hackeo de correo.\n\n**Consejo:** activa 2FA en email, banca, redes sociales, almacenamiento en la nube y cualquier servicio importante. Empieza por el email: si proteges el correo, proteges la llave maestra de recuperación de contraseñas.",
           },
           {
             id: "l3-firma-digital",
             title: "Firma digital: qué es y qué no es",
             minutes: 7,
             content:
-              "La **firma digital** no es una imagen de tu firma escaneada. Es un mecanismo criptográfico que garantiza tres cosas:
-
-1. **Autenticidad:** el documento fue firmado por quien dice haberlo firmado.
-2. **Integridad:** el documento no ha sido modificado después de firmarse.
-3. **No repudio:** el firmante no puede negar haberlo firmado.
-
-**Dónde la usas sin darte cuenta:**
-- Facturas electrónicas.
-- Contratos con plataformas como Signaturit, DocuSign o Firmafy.
-- Certificados digitales del DNIe o FNMT en España.
-- Actualizaciones de software y apps.
-
-**Firma digital vs firma electrónica simple:**
-- La **firma electrónica simple** es un check o una imagen: poca validez legal.
-- La **firma digital** usa criptografía y tiene plena validez legal en muchos países.
-
-Nunca firmes nada digitalmente si no entiendes qué estás aceptando.",
+              "La **firma digital** no es una imagen de tu firma escaneada. Es un mecanismo criptográfico que garantiza tres cosas:\n\n1. **Autenticidad:** el documento fue firmado por quien dice haberlo firmado.\n2. **Integridad:** el documento no ha sido modificado después de firmarse.\n3. **No repudio:** el firmante no puede negar haberlo firmado.\n\n**Dónde la usas sin darte cuenta:**\n- Facturas electrónicas.\n- Contratos con plataformas como Signaturit, DocuSign o Firmafy.\n- Certificados digitales del DNIe o FNMT en España.\n- Actualizaciones de software y apps.\n\n**Firma digital vs firma electrónica simple:**\n- La **firma electrónica simple** es un check o una imagen: poca validez legal.\n- La **firma digital** usa criptografía y tiene plena validez legal en muchos países.\n\nNunca firmes nada digitalmente si no entiendes qué estás aceptando.",
           },
           {
             id: "l4-robo-identidad",
             title: "Robo de identidad: qué hacer antes y después",
             minutes: 6,
             content:
-              "El **robo de identidad** ocurre cuando alguien usa tus datos personales para suplantarte: pedir créditos, abrir cuentas, cometer fraudes o acceder a servicios a tu nombre.
-
-**Cómo prevenirlo:**
-- Limita la información pública: DNI, dirección, teléfono, fechas clave.
-- Revisa regularmente si tu email aparece en filtraciones (Have I Been Pwned).
-- Usa alias de email cuando sea posible.
-- Desconfía de quien te pide datos por teléfono o mensaje.
-
-**Si te suplantan:**
-1. Cambia contraseñas inmediatamente, empezando por el email.
-2. Revisa movimientos bancarios y cuentas.
-3. Denuncia ante la policía y la entidad afectada.
-4. Congela o alerta a burós de crédito si es necesario.
-5. Documenta todo: capturas, fechas, referencias.
-
-Actuar rápido limita mucho el daño.",
+              "El **robo de identidad** ocurre cuando alguien usa tus datos personales para suplantarte: pedir créditos, abrir cuentas, cometer fraudes o acceder a servicios a tu nombre.\n\n**Cómo prevenirlo:**\n- Limita la información pública: DNI, dirección, teléfono, fechas clave.\n- Revisa regularmente si tu email aparece en filtraciones (Have I Been Pwned).\n- Usa alias de email cuando sea posible.\n- Desconfía de quien te pide datos por teléfono o mensaje.\n\n**Si te suplantan:**\n1. Cambia contraseñas inmediatamente, empezando por el email.\n2. Revisa movimientos bancarios y cuentas.\n3. Denuncia ante la policía y la entidad afectada.\n4. Congela o alerta a burós de crédito si es necesario.\n5. Documenta todo: capturas, fechas, referencias.\n\nActuar rápido limita mucho el daño.",
           },
         ],
         quiz: [
@@ -1266,77 +1139,28 @@ Actuar rápido limita mucho el daño.",
             title: "Copias de seguridad: el seguro que todos deberían tener",
             minutes: 7,
             content:
-              "Un **backup** es una copia de tus archivos importantes guardada en otro lugar, para que puedas recuperarlos si el original desaparece.
-
-**La regla 3-2-1 simplificada:**
-- **3 copias** de lo importante.
-- En **2 medios distintos** (disco externo + nube, por ejemplo).
-- **1 copia fuera de casa** (nube o disco en otra ubicación).
-
-**Qué hacer:**
-- Activa la copia automática del móvil (Google Fotos, iCloud, Nextcloud).
-- Usa una nube para documentos importantes (Drive, Dropbox, Proton Drive, pCloud).
-- Haz una copia periódica en disco externo de lo que no puedes perder.
-- Prueba que puedes recuperar un archivo de vez en cuando. Un backup que no se restaura no sirve.
-
-El ransomware o un robo dejan de ser una catástrofe si tienes backups actualizados.",
+              "Un **backup** es una copia de tus archivos importantes guardada en otro lugar, para que puedas recuperarlos si el original desaparece.\n\n**La regla 3-2-1 simplificada:**\n- **3 copias** de lo importante.\n- En **2 medios distintos** (disco externo + nube, por ejemplo).\n- **1 copia fuera de casa** (nube o disco en otra ubicación).\n\n**Qué hacer:**\n- Activa la copia automática del móvil (Google Fotos, iCloud, Nextcloud).\n- Usa una nube para documentos importantes (Drive, Dropbox, Proton Drive, pCloud).\n- Haz una copia periódica en disco externo de lo que no puedas perder.\n- Prueba que puedes recuperar un archivo de vez en cuando. Un backup que no se restaura no sirve.\n\nEl ransomware o un robo dejan de ser una catástrofe si tienes backups actualizados.",
           },
           {
             id: "l2-actualizaciones",
             title: "Actualizar no es opción: parches y versiones",
             minutes: 5,
             content:
-              "Las **actualizaciones** no solo traen novedades: corrigen agujeros de seguridad que los atacantes ya están explotando.
-
-**Buenas prácticas:**
-- Activa las actualizaciones automáticas en móvil, ordenador, router y apps.
-- No ignores la alerta de "reiniciar para instalar" durante semanas.
-- Desinstala apps que no uses: menos software = menos superficie de ataque.
-- En móviles, evita instalar apps fuera de las tiendas oficiales (Google Play/App Store) salvo que sepas lo que haces.
-
-Un sistema desactualizado es como una casa con la cerradura rota: no necesitan fuerza para entrar.",
+              "Las **actualizaciones** no solo traen novedades: corrigen agujeros de seguridad que los atacantes ya están explotando.\n\n**Buenas prácticas:**\n- Activa las actualizaciones automáticas en móvil, ordenador, router y apps.\n- No ignores la alerta de \"reiniciar para instalar\" durante semanas.\n- Desinstala apps que no uses: menos software = menos superficie de ataque.\n- En móviles, evita instalar apps fuera de las tiendas oficiales (Google Play/App Store) salvo que sepas lo que haces.\n\nUn sistema desactualizado es como una casa con la cerradura rota: no necesitan fuerza para entrar.",
           },
           {
             id: "l3-navegacion",
             title: "Navegar sin dejar huella innecesaria",
             minutes: 6,
             content:
-              "Tu navegador es una de las puertas más importantes. Algunos hábitos sencillos lo protegen mucho:
-
-- **HTTPS:** mira el candado en la barra de direcciones. Si pone "no seguro", no introduzcas datos.
-- **Extensiones útiles:** bloqueadores de anuncios y rastreadores (uBlock Origin), gestores de contraseñas.
-- **Cookies y permisos:** revisa qué páginas tienen acceso a cámara, micrófono o ubicación.
-- **Redes públicas:** evita hacer operaciones bancarias en wifi públicas. Si no hay más remedio, usa una VPN fiable.
-- **Búsquedas y privacidad:** considera motores como DuckDuckGo o Brave Search si quieres menos perfilado.
-
-No hace falta ser invisible en internet, pero tampoco hay que ser transparente.",
+              "Tu navegador es una de las puertas más importantes. Algunos hábitos sencillos lo protegen mucho:\n\n- **HTTPS:** mira el candado en la barra de direcciones. Si pone \"no seguro\", no introduzcas datos.\n- **Extensiones útiles:** bloqueadores de anuncios y rastreadores (uBlock Origin), gestores de contraseñas.\n- **Cookies y permisos:** revisa qué páginas tienen acceso a cámara, micrófono o ubicación.\n- **Redes públicas:** evita hacer operaciones bancarias en wifi públicas. Si no hay más remedio, usa una VPN fiable.\n- **Búsquedas y privacidad:** considera motores como DuckDuckGo o Brave Search si quieres menos perfilado.\n\nNo hace falta ser invisible en internet, pero tampoco hay que ser transparente.",
           },
           {
             id: "l4-dispositivos",
             title: "Seguridad en móvil, router y hogar conectado",
             minutes: 6,
             content:
-              "Los dispositivos de casa también son objetivos:
-
-**Móvil:**
-- Usa un PIN o biometría fuerte.
-- Encripta el dispositivo.
-- No desbloquees apps con reconocimiento facial si duermes con alguien que pueda usar tu cara.
-- Revisa permisos de apps con frecuencia.
-
-**Router:**
-- Cambia la contraseña de administrador por defecto.
-- Actualiza el firmware.
-- Usa WPA3 o WPA2 con contraseña fuerte.
-- Desactiva WPS si no lo usas.
-
-**Hogar conectado (IoT):**
-- Cámaras, altavoces, termostatos y enchufes inteligentes pueden ser puertas de entrada.
-- Cambia contraseñas por defecto.
-- Mantenlos actualizados.
-- Aíslos en una red WiFi de invitados si es posible.
-
-La seguridad en casa empieza por la red.",
+              "Los dispositivos de casa también son objetivos:\n\n**Móvil:**\n- Usa un PIN o biometría fuerte.\n- Encripta el dispositivo.\n- No desbloquees apps con reconocimiento facial si duermes con alguien que pueda usar tu cara.\n- Revisa permisos de apps con frecuencia.\n\n**Router:**\n- Cambia la contraseña de administrador por defecto.\n- Actualiza el firmware.\n- Usa WPA3 o WPA2 con contraseña fuerte.\n- Desactiva WPS si no lo usas.\n\n**Hogar conectado (IoT):**\n- Cámaras, altavoces, termostatos y enchufes inteligentes pueden ser puertas de entrada.\n- Cambia contraseñas por defecto.\n- Mantenlos actualizados.\n- Aíslos en una red WiFi de invitados si es posible.\n\nLa seguridad en casa empieza por la red.",
           },
         ],
         quiz: [
@@ -1484,4 +1308,3 @@ La seguridad en casa empieza por la red.",
 ];
 
 export const courseBySlug = (slug: string) => courses.find((c) => c.slug === slug);
-
