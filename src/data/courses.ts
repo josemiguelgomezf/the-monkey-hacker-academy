@@ -1058,7 +1058,7 @@ Cuanto más personalizado, más peligroso. Pero siempre deja señales.",
               "Antes de hacer clic o responder, revisa estas señales:
 
 **1. El remitente:**
-- Comprueba la dirección completa, no solo el nombre. `soporte@amazon.com` no es lo mismo que `soporte@amazon-seguridad.com`.
+- Comprueba la dirección completa, no solo el nombre. **soporte@amazon.com** no es lo mismo que **soporte@amazon-seguridad.com**.
 - Desconfía de dominios con guiones, números o extensiones raras.
 
 **2. El enlace:**
@@ -1147,7 +1147,7 @@ Si dudas, no actúes. Verifica por otro medio.",
               "La contraseña más segura del mundo no sirve si la reutilizas. Cuando una web sufre una filtración, los atacantes pruean tu email y contraseña en cientos de servicios más.
 
 **Buenas prácticas:**
-- Usa **contraseñas largas y únicas** para cada servicio. Una frase de 4 palabras aleatorias es mejor que `P@ssw0rd123`.
+- Usa **contraseñas largas y únicas** para cada servicio. Una frase de 4 palabras aleatorias es mejor que **P@ssw0rd123**.
 - No uses datos personales: cumpleaños, nombres de mascotas o DNI son fáciles de adivinar.
 - Activa **el doble factor de autenticación (2FA/MFA)** siempre que puedas.
 - Usa un **gestor de contraseñas** para no tener que memorizarlas todas.
